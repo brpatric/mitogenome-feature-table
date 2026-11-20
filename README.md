@@ -8,6 +8,10 @@ Typing a feature table by hand is slow and error-prone. Of the two published *Er
 
 **Current version:** 2.0.1 (2026-11-20) &nbsp;·&nbsp; **Author:** L. Brian Patrick, Department of Biological Sciences, Dakota Wesleyan University ([ORCID 0000-0003-1969-9600](https://orcid.org/0000-0003-1969-9600))
 
+**Cite as:**
+
+> Patrick, L. B. (2026). *GenBank Feature Table Formatter: GenBank five-column feature tables for mitochondrial genomes* (Version 2.0.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24399061
+
 ## Contents
 
 ```

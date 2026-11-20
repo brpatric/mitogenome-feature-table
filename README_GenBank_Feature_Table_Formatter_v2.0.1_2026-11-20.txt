@@ -23,6 +23,12 @@ check every protein-coding gene against the sequence before you submit.
 Current version: 2.0.1 (2026-11-20)  ·  Author: L. Brian Patrick, Department
 of Biological Sciences, Dakota Wesleyan University (ORCID 0000-0003-1969-9600)
 
+Cite as:
+
+  Patrick, L. B. (2026). GenBank Feature Table Formatter: GenBank five-column
+  feature tables for mitochondrial genomes (Version 2.0.1) [Computer
+  software]. Zenodo. https://doi.org/10.5281/zenodo.24399061
+
 Contents
 
     mitogenome-feature-table/
