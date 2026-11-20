@@ -1,4 +1,4 @@
-GenBank_Feature_Table_Formatter v2.0.0 (2026-11-19)
+GenBank_Feature_Table_Formatter v2.0.1 (2026-11-20)
   input : example/input/GeneOrder_Erigone_atra_male.xlsx
   FASTA : example/input/Erigone_atra_male.fasta  (14251 bp, ID Erigone_atra_male)
   code  : 5 (invertebrate mitochondrial)

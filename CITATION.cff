@@ -2,9 +2,8 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 title: "GenBank Feature Table Formatter: GenBank five-column feature tables for mitochondrial genomes"
 type: software
-version: 2.0.0
-date-released: 2026-11-19
-doi: "10.5281/zenodo.24386073"
+version: 2.0.1
+date-released: 2026-11-20
 authors:
   - family-names: Patrick
     given-names: L. Brian

@@ -6,14 +6,14 @@ Writes the GenBank **five-column feature table** (`.tbl`) for a mitochondrial ge
 
 Typing a feature table by hand is slow and error-prone. Of the two published *Erigone atra* mitogenomes used as the worked example, each GenBank record has one tRNA coordinate that differs from the paper's gene table, and both list the two halves of the origin-spanning tRNA-Cys in the wrong order (see [Step 4](#step-4-check-against-the-genbank-records)). The program writes every feature from the same table you publish, and can check every protein-coding gene against the sequence before you submit.
 
-**Current version:** 2.0.0 (2026-11-19) &nbsp;·&nbsp; **Author:** L. Brian Patrick, Department of Biological Sciences, Dakota Wesleyan University ([ORCID 0000-0003-1969-9600](https://orcid.org/0000-0003-1969-9600))
+**Current version:** 2.0.1 (2026-11-20) &nbsp;·&nbsp; **Author:** L. Brian Patrick, Department of Biological Sciences, Dakota Wesleyan University ([ORCID 0000-0003-1969-9600](https://orcid.org/0000-0003-1969-9600))
 
 ## Contents
 
 ```
 mitogenome-feature-table/
-├── GenBank_Feature_Table_Formatter_v2.0.0_2026-11-19.py           the program
-├── README_GenBank_Feature_Table_Formatter_v2.0.0_2026-11-19.txt   plain-text manual (same content as this page)
+├── GenBank_Feature_Table_Formatter_v2.0.1_2026-11-20.py           the program
+├── README_GenBank_Feature_Table_Formatter_v2.0.1_2026-11-20.txt   plain-text manual (same content as this page)
 ├── README.md                                                      this page
 ├── CITATION.cff                                                   citation information
 ├── LICENSE
@@ -176,7 +176,7 @@ Pick whichever way suits you. All of them produce the same feature table.
 
 #### A. In IDLE, with the SETTINGS block (main method)
 
-Open `GenBank_Feature_Table_Formatter_v2.0.0_2026-11-19.py` in IDLE, edit the SETTINGS block near the top, save, and press **F5**:
+Open `GenBank_Feature_Table_Formatter_v2.0.1_2026-11-20.py` in IDLE, edit the SETTINGS block near the top, save, and press **F5**:
 
 ```python
 INPUT_FILE    = r"C:\Users\me\mitogenome-feature-table\example\input\GeneOrder_Erigone_atra_male.xlsx"
@@ -195,7 +195,7 @@ Keep the `r` before each opening quote on Windows. On a Mac a path looks like `r
 Leave `INPUT_FILE = None`, open the file in IDLE and press **F5**. The program asks for the files in the shell. You can paste a path straight from Windows Explorer (**Shift + right-click → Copy as path**); quotes around it are removed:
 
 ```
-GenBank_Feature_Table_Formatter v2.0.0 (2026-11-19)  -- SETTINGS not filled in; answer the questions below.
+GenBank_Feature_Table_Formatter v2.0.1 (2026-11-20)  -- SETTINGS not filled in; answer the questions below.
 Gene-order file (.xlsx/.csv): "C:\Users\me\data\GeneOrder_Erigone_atra_male.xlsx"
 Genome FASTA file (recommended; Enter to skip): "C:\Users\me\data\Erigone_atra_male.fasta"
 ```
@@ -216,7 +216,7 @@ Keyword arguments: `fasta_file`, `output_file`, `seq_id`, `genome_length`, `tran
 From inside the `mitogenome-feature-table` folder:
 
 ```bash
-python3 GenBank_Feature_Table_Formatter_v2.0.0_2026-11-19.py example/input/GeneOrder_Erigone_atra_male.xlsx --fasta example/input/Erigone_atra_male.fasta --out example/output/Erigone_atra_male.tbl
+python3 GenBank_Feature_Table_Formatter_v2.0.1_2026-11-20.py example/input/GeneOrder_Erigone_atra_male.xlsx --fasta example/input/Erigone_atra_male.fasta --out example/output/Erigone_atra_male.tbl
 ```
 
 On Windows use `py -3.13` in place of `python3`, and `\` in place of `/` if you prefer. Options:
@@ -241,7 +241,7 @@ The program needs no scheduler. If each genome has a matching pair of files (`Ge
 ```bash
 for f in GeneOrder_*.xlsx; do
     name=${f#GeneOrder_}; name=${name%.xlsx}
-    python3 GenBank_Feature_Table_Formatter_v2.0.0_2026-11-19.py "$f" --fasta "$name.fasta" --out "$name.tbl" > "$name.log"
+    python3 GenBank_Feature_Table_Formatter_v2.0.1_2026-11-20.py "$f" --fasta "$name.fasta" --out "$name.tbl" > "$name.log"
 done
 ```
 
@@ -253,14 +253,14 @@ The file name has dots in it, so load it with `runpy` rather than `import`:
 
 ```python
 import runpy
-fmt = runpy.run_path("GenBank_Feature_Table_Formatter_v2.0.0_2026-11-19.py")
+fmt = runpy.run_path("GenBank_Feature_Table_Formatter_v2.0.1_2026-11-20.py")
 fmt["run"]("GeneOrder_Erigone_atra_male.xlsx", fasta_file="Erigone_atra_male.fasta")
 ```
 
 #### What the shell shows
 
 ```
-GenBank_Feature_Table_Formatter v2.0.0 (2026-11-19)
+GenBank_Feature_Table_Formatter v2.0.1 (2026-11-20)
   input : example/input/GeneOrder_Erigone_atra_male.xlsx
   FASTA : example/input/Erigone_atra_male.fasta  (14251 bp, ID Erigone_atra_male)
   code  : 5 (invertebrate mitochondrial)
@@ -339,9 +339,9 @@ Both feature tables were run through NCBI's tbl2asn, and the resulting records w
 * **tRNA-Pro and tRNA-Ile.** The program uses the coordinates of the published Table 1. The two genomes are identical over both tRNAs, so each tRNA should be the same length in both. Only the Table 1 coordinates (59 bp and 58 bp) make that true. The GenBank values are 3 and 4 bp shorter in one specimen only. Both errors are already in the hand-made feature tables that were submitted (7925 and 8414), so they are typing errors, not changes made by NCBI.
 * **tRNA-Cys.** GenBank lists the two intervals in the wrong order. Read in that order, the tRNA runs from 14251 down to 14195, then jumps to 5 and runs down to 1. On the minus strand the gene actually starts at position 5, runs down to 1 and continues across the origin from 14251 down to 14195. The extracted sequence is the same 62 bases either way, but only the program's order gives them in the right sequence: GenBank's order moves the first five bases of the tRNA (`AGTAA`) to its end, which breaks the acceptor stem (1–2 of 7 base pairs instead of 5 of 7) and shifts the GCA anticodon out of the anticodon loop. The program's order follows NCBI's example for a minus-strand gene crossing the origin (Step 3). The reversed order also comes from the submitted feature tables.
 
-**What NCBI changed in the hand-made submission, and what the program now writes itself.** Comparing the submitted feature tables with the published records shows the changes GenBank staff made at submission. Version 2.0.0 writes each of them directly:
+**What NCBI changed in the hand-made submission, and what the program now writes itself.** Comparing the submitted feature tables with the published records shows the changes GenBank staff made at submission. The program writes each of them directly:
 
-| Submitted by hand | In GenBank, and written by v2.0.0 |
+| Submitted by hand | In GenBank, and written by the program |
 |---|---|
 | no `transl_except` for the incomplete stops of *nad2*, *nad4l* and *nad5* | `transl_except (pos:…,aa:TERM)` added |
 | *cox1* at `1..1536` with a TTA start | marked 5′ partial: `<1..1536` |
@@ -402,9 +402,9 @@ The program cannot check tRNA or rRNA boundaries against the sequence, so check 
 
 If you use this program, please cite it as given in [`CITATION.cff`](CITATION.cff) (or with the **Cite this repository** button on this page), giving the version used:
 
-> Patrick, L. B. (2026). *GenBank Feature Table Formatter: GenBank five-column feature tables for mitochondrial genomes* (Version 2.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24386073
+> Patrick, L. B. (2026). *GenBank Feature Table Formatter: GenBank five-column feature tables for mitochondrial genomes* (Version 2.0.1) [Computer software]. https://github.com/brpatric/mitogenome-feature-table
 
-The release is archived on [Zenodo](https://doi.org/10.5281/zenodo.24386073); cite the version you used. If you use the worked example, please also cite Patrick and Santos (2025).
+Releases are archived on Zenodo (v2.0.0: [10.5281/zenodo.24386073](https://doi.org/10.5281/zenodo.24386073)); cite the version you used. If you use the worked example, please also cite Patrick and Santos (2025).
 
 ## References
 
@@ -426,12 +426,13 @@ Python Software Foundation. (2024). *Python* (Version 3.13) [Computer software].
 
 ## Provenance and version history
 
-Version 1.0.0 was written by the author with the assistance of Claude (Anthropic). Version 2.0.0 was drafted with the assistance of Claude Opus 5.5 (Anthropic) on 2026-11-19, from specifications by the author, and reviewed by the author. Version 2.0.0 was tested with Python 3.13.18 and openpyxl 3.1.5 on the two *Erigone atra* mitogenomes in `example/`. The output was compared feature by feature with GenBank PP726906 and PP726907 and checked with NCBI tbl2asn 25.7 (Step 4). Origin-crossing features were also tested on both strands by rotating the male genome so that *cox1* (+) and *nad5* (−) cross the origin. All 13 proteins translated by tbl2asn were identical to those in GenBank.
+Version 1.0.0 was written by the author with the assistance of Claude (Anthropic). Version 2.0.0 was drafted with the assistance of Claude Opus 5.5 (Anthropic) on 2026-11-19, from specifications by the author, and reviewed by the author; version 2.0.1 (2026-11-20) likewise. Version 2.0.0 was tested with Python 3.13.18 and openpyxl 3.1.5 on the two *Erigone atra* mitogenomes in `example/`. The output was compared feature by feature with GenBank PP726906 and PP726907 and checked with NCBI tbl2asn 25.7 (Step 4). Origin-crossing features were also tested on both strands by rotating the male genome so that *cox1* (+) and *nad5* (−) cross the origin. All 13 proteins translated by tbl2asn were identical to those in GenBank.
 
 | Version | Date | Changes |
 |---|---|---|
 | 1.0.0 | (undated) | Original script (`GenBank_Feature_Table_Formatter.py`): a six-column GeneOrder Excel file to `.tbl`; parameters edited at the bottom of the file; needed pandas and openpyxl. |
 | 2.0.0 | 2026-11-19 | Rewrite. Columns found by header name (extra columns ignored; v1.0.0 stopped with an error on a spreadsheet with more than six columns). MITOS2-style gene names accepted. Features crossing the origin handled for every feature type and both strands, with the two intervals in the correct order (v1.0.0 reversed them for minus-strand tRNAs). `transl_except` added for incomplete stop codons. Footnote letters on codons ignored (v1.0.0 did not recognise `TAb` as an incomplete stop). Start codons checked against the genetic code. Optional FASTA check of every protein-coding gene. NCBI product names for rRNAs (16S/12S ribosomal RNA). Control region written as a valid `misc_feature` (v1.0.0 put its label in a fourth column). Warnings printed in the shell rather than written into the `.tbl`. Sequence ID checked for spaces. SETTINGS block at the top, questions in the shell if it is left empty, command-line options, and genetic codes 2, 4, 5, 9, 13 and 14. pandas no longer needed; CSV/TSV input accepted. |
+| 2.0.1 | 2026-11-20 | Example files only; the program code is unchanged and writes identical feature tables. The example gene-order spreadsheets now hold only the gene-order sheet (a sheet of working notes was removed), without the publication footnote letters (`TAb`, `Tb`) or cell highlighting. Zenodo DOI added. |
 
 Each version's file names carry its version number and date. Each release on this page is tagged with its version.
 

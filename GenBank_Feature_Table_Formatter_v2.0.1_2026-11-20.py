@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 r"""
-GenBank_Feature_Table_Formatter_v2.0.0_2026-11-19.py
+GenBank_Feature_Table_Formatter_v2.0.1_2026-11-20.py
 
 Writes a GenBank five-column feature table (.tbl) for a mitochondrial genome
 from a gene-order spreadsheet (one row per gene: Gene, Begin, End, Strand,
@@ -9,22 +9,23 @@ BankIt) needs, together with the genome FASTA, to make a GenBank submission.
 
 PROVENANCE
   Program    : GenBank_Feature_Table_Formatter
-  Version    : 2.0.0
-  Date       : 2026-11-19
+  Version    : 2.0.1
+  Date       : 2026-11-20
   Author     : L. Brian Patrick, Department of Biological Sciences,
                Dakota Wesleyan University, Mitchell, SD, USA
                ORCID 0000-0003-1969-9600
   Development: v1.0.0 written by the author with the assistance of Claude
                (Anthropic). v2.0.0 drafted with the assistance of Claude
                Opus 5.5 (Anthropic), 2026-11-19, from specifications by the
-               author, and reviewed by the author.
+               author, and reviewed by the author; v2.0.1 (2026-11-20)
+               likewise.
   Derived from: GenBank_Feature_Table_Formatter.py (v1.0.0, the author's
                original script).
   Tested with: Python 3.13.18 and openpyxl 3.1.5, on the two Erigone atra
                mitogenomes in example/ (GenBank PP726906 and PP726907).
                Output was compared feature by feature with both GenBank
                records and checked with NCBI tbl2asn 25.7 (see README).
-  Companion  : README_GenBank_Feature_Table_Formatter_v2.0.0_2026-11-19.txt
+  Companion  : README_GenBank_Feature_Table_Formatter_v2.0.1_2026-11-20.txt
                (README.md on GitHub)
   Version history
     1.0.0  (undated)   Original script: GeneOrder Excel file (exactly six
@@ -45,6 +46,11 @@ PROVENANCE
                        spaces; SETTINGS block at the top, questions in the
                        shell if it is left empty, and command-line options;
                        pandas no longer needed; CSV/TSV input accepted.
+    2.0.1  2026-11-20  Example files only; program code unchanged. The
+                       example gene-order spreadsheets now hold only the
+                       gene-order sheet (working-notes sheet removed), with
+                       publication footnote letters (TAb, Tb) and cell
+                       highlighting removed. Zenodo DOI added to the README.
 
 HOW TO USE (IDLE 3.13)
   1. Open this file in IDLE.
@@ -55,7 +61,7 @@ HOW TO USE (IDLE 3.13)
     >>> run(r"C:\path\GeneOrder_male.xlsx", fasta_file=r"C:\path\male.fasta")
 
 OPTIONAL: COMMAND LINE (bash, macOS Terminal, Windows PowerShell)
-  python3 GenBank_Feature_Table_Formatter_v2.0.0_2026-11-19.py GENE_ORDER
+  python3 GenBank_Feature_Table_Formatter_v2.0.1_2026-11-20.py GENE_ORDER
           [--fasta FILE] [--out FILE] [--seq-id ID] [--length BP] [--code N]
           [--sheet NAME] [--no-partial-start]
   With no arguments, the SETTINGS below are used.
@@ -127,8 +133,8 @@ import re
 import sys
 
 PROGRAM = "GenBank_Feature_Table_Formatter"
-VERSION = "2.0.0"
-DATE = "2026-11-19"
+VERSION = "2.0.1"
+DATE = "2026-11-20"
 
 # -----------------------------------------------------------------------------
 # Gene names
