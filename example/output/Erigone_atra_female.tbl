@@ -1,0 +1,135 @@
+>Feature Erigone_atra_female
+<1	1536	gene
+			gene	COX1
+<1	1536	CDS
+			product	cytochrome c oxidase subunit I
+			transl_table	5
+			note	Start codon TTA; Stop codon TAA
+1540	2205	gene
+			gene	COX2
+1540	2205	CDS
+			product	cytochrome c oxidase subunit II
+			transl_table	5
+			note	Start codon TTG; Stop codon TAA
+2201	2262	tRNA
+			product	tRNA-Lys
+2246	2300	tRNA
+			product	tRNA-Asp
+2294	2449	gene
+			gene	ATP8
+2294	2449	CDS
+			product	ATP synthase F0 subunit 8
+			transl_table	5
+			note	Start codon ATT; Stop codon TAA
+2440	3108	gene
+			gene	ATP6
+2440	3108	CDS
+			product	ATP synthase F0 subunit 6
+			transl_table	5
+			note	Start codon ATG; Stop codon TAA
+3113	3904	gene
+			gene	COX3
+3113	3904	CDS
+			product	cytochrome c oxidase subunit III
+			transl_table	5
+			note	Start codon TTG; Stop codon TAA
+3897	3949	tRNA
+			product	tRNA-Gly
+3945	4277	gene
+			gene	ND3
+3945	4277	CDS
+			product	NADH dehydrogenase subunit 3
+			transl_table	5
+			note	Start codon ATA; Stop codon TAA
+4324	4274	tRNA
+			product	tRNA-Leu
+4325	4383	tRNA
+			product	tRNA-Asn
+4430	4482	tRNA
+			product	tRNA-Ala
+4479	4529	tRNA
+			product	tRNA-Ser
+4524	4584	tRNA
+			product	tRNA-Arg
+4567	4623	tRNA
+			product	tRNA-Glu
+4660	4607	tRNA
+			product	tRNA-Phe
+6296	4660	gene
+			gene	ND5
+6296	4660	CDS
+			product	NADH dehydrogenase subunit 5
+			transl_table	5
+			transl_except	(pos:complement(4660..4661),aa:TERM)
+			note	Start codon ATA; Stop codon TA; TAA stop codon is completed by the addition of 3' A residues to the mRNA
+6344	6290	tRNA
+			product	tRNA-His
+7617	6340	gene
+			gene	ND4
+7617	6340	CDS
+			product	NADH dehydrogenase subunit 4
+			transl_table	5
+			note	Start codon TTG; Stop codon TAA
+7876	7618	gene
+			gene	ND4L
+7876	7618	CDS
+			product	NADH dehydrogenase subunit 4L
+			transl_table	5
+			transl_except	(pos:complement(7618),aa:TERM)
+			note	Start codon ATT; Stop codon T; TAA stop codon is completed by the addition of 3' A residues to the mRNA
+7930	7872	tRNA
+			product	tRNA-Pro
+7934	8365	gene
+			gene	ND6
+7934	8365	CDS
+			product	NADH dehydrogenase subunit 6
+			transl_table	5
+			note	Start codon TTG; Stop codon TAA
+8361	8418	tRNA
+			product	tRNA-Ile
+8416	9543	gene
+			gene	CYTB
+8416	9543	CDS
+			product	cytochrome b
+			transl_table	5
+			note	Start codon ATA; Stop codon TAG
+9543	9597	tRNA
+			product	tRNA-Ser
+9598	9654	tRNA
+			product	tRNA-Thr
+10560	9643	gene
+			gene	ND1
+10560	9643	CDS
+			product	NADH dehydrogenase subunit 1
+			transl_table	5
+			note	Start codon ATT; Stop codon TAG
+10609	10551	tRNA
+			product	tRNA-Leu
+11638	10610	rRNA
+			product	16S ribosomal RNA
+			note	16S
+11683	11626	tRNA
+			product	tRNA-Val
+12358	11685	rRNA
+			product	12S ribosomal RNA
+			note	12S
+12420	12358	tRNA
+			product	tRNA-Gln
+12421	13364	misc_feature
+			note	putative control region
+13365	13424	tRNA
+			product	tRNA-Met
+13415	14373	gene
+			gene	ND2
+13415	14373	CDS
+			product	NADH dehydrogenase subunit 2
+			transl_table	5
+			transl_except	(pos:14372..14373,aa:TERM)
+			note	Start codon ATA; Stop codon TA; TAA stop codon is completed by the addition of 3' A residues to the mRNA
+14373	14427	tRNA
+			product	tRNA-Trp
+14463	14407	tRNA
+			product	tRNA-Tyr
+5	1	tRNA
+14504	14448
+			product	tRNA-Cys

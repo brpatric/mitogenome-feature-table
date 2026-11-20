@@ -1,0 +1,8 @@
+GenBank_Feature_Table_Formatter v2.0.0 (2026-11-19)
+  input : example/input/GeneOrder_Erigone_atra_male.xlsx
+  FASTA : example/input/Erigone_atra_male.fasta  (14251 bp, ID Erigone_atra_male)
+  code  : 5 (invertebrate mitochondrial)
+  found : 13 protein-coding, 22 tRNA, 2 rRNA, 1 control region
+  Messages (1):
+    - row 2 (COX1): TTA is not a start codon in genetic code 5; CDS marked 5' partial (<)
+Done. Feature table written to: example/output/Erigone_atra_male.tbl

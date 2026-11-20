@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "GenBank Feature Table Formatter: GenBank five-column feature tables for mitochondrial genomes"
+type: software
+version: 2.0.0
+date-released: 2026-11-19
+authors:
+  - family-names: Patrick
+    given-names: L. Brian
+    affiliation: "Department of Biological Sciences, Dakota Wesleyan University, Mitchell, SD, USA"
+    orcid: "https://orcid.org/0000-0003-1969-9600"
+repository-code: "https://github.com/brpatric/mitogenome-feature-table"
+license: MIT
+keywords:
+  - mitogenome
+  - mitochondrial genome
+  - GenBank submission
+  - feature table
+  - table2asn
+  - genome annotation
+references:
+  - type: article
+    title: "The complete mitochondrial genome of Erigone atra Blackwall, 1833 (Araneae, Linyphiidae)"
+    authors:
+      - family-names: Patrick
+        given-names: L. Brian
+      - family-names: Santos
+        given-names: Scott R.
+    journal: "Mitochondrial DNA Part B"
+    year: 2025
+    volume: 10
+    issue: 12
+    start: 1243
+    end: 1248
+    doi: "10.1080/23802359.2025.2594297"
