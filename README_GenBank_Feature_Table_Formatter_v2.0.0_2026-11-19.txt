@@ -5,6 +5,8 @@ README for GenBank_Feature_Table_Formatter_v2.0.0_2026-11-19.py
 
 GenBank Feature Table Formatter
 
+[DOI]
+
 Writes the GenBank five-column feature table (.tbl) for a mitochondrial genome
 from a simple gene-order spreadsheet (one row per gene: Gene, Begin, End,
 Strand, Start codon, Stop codon). The .tbl file and the genome FASTA are what
@@ -480,9 +482,10 @@ Cite this repository button on this page), giving the version used:
 
   Patrick, L. B. (2026). GenBank Feature Table Formatter: GenBank five-column
   feature tables for mitochondrial genomes (Version 2.0.0) [Computer
-  software]. https://github.com/brpatric/mitogenome-feature-table
+  software]. Zenodo. https://doi.org/10.5281/zenodo.24386073
 
-If you use the worked example, please also cite Patrick and Santos (2025).
+The release is archived on Zenodo; cite the version you used. If you use the
+worked example, please also cite Patrick and Santos (2025).
 
 References
 

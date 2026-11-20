@@ -4,6 +4,7 @@ title: "GenBank Feature Table Formatter: GenBank five-column feature tables for 
 type: software
 version: 2.0.0
 date-released: 2026-11-19
+doi: "10.5281/zenodo.24386073"
 authors:
   - family-names: Patrick
     given-names: L. Brian
