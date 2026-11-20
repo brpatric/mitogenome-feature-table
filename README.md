@@ -1,5 +1,7 @@
 # GenBank Feature Table Formatter
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24399061.svg)](https://doi.org/10.5281/zenodo.24399061)
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24386073.svg)](https://doi.org/10.5281/zenodo.24386073)
 
 Writes the GenBank **five-column feature table** (`.tbl`) for a mitochondrial genome from a simple gene-order spreadsheet (one row per gene: Gene, Begin, End, Strand, Start codon, Stop codon). The `.tbl` file and the genome FASTA are what NCBI's **table2asn** (or BankIt) needs to make a GenBank submission. It is written to run from the IDLE 3.13 shell, and also runs from the command line.
@@ -402,9 +404,9 @@ The program cannot check tRNA or rRNA boundaries against the sequence, so check 
 
 If you use this program, please cite it as given in [`CITATION.cff`](CITATION.cff) (or with the **Cite this repository** button on this page), giving the version used:
 
-> Patrick, L. B. (2026). *GenBank Feature Table Formatter: GenBank five-column feature tables for mitochondrial genomes* (Version 2.0.1) [Computer software]. https://github.com/brpatric/mitogenome-feature-table
+> Patrick, L. B. (2026). *GenBank Feature Table Formatter: GenBank five-column feature tables for mitochondrial genomes* (Version 2.0.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24399061
 
-Releases are archived on Zenodo (v2.0.0: [10.5281/zenodo.24386073](https://doi.org/10.5281/zenodo.24386073)); cite the version you used. If you use the worked example, please also cite Patrick and Santos (2025).
+Releases are archived on Zenodo (v2.0.1: [10.5281/zenodo.24399061](https://doi.org/10.5281/zenodo.24399061); v2.0.0: [10.5281/zenodo.24386073](https://doi.org/10.5281/zenodo.24386073)); cite the version you used. If you use the worked example, please also cite Patrick and Santos (2025).
 
 ## References
 
