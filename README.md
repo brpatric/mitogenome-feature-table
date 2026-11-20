@@ -112,7 +112,7 @@ The `example/` folder holds the two mitogenomes of the linyphiid spider *Erigone
 | [`Erigone_atra_male.fasta`](example/input/Erigone_atra_male.fasta) | male genome, from PP726906 |
 | [`Erigone_atra_female.fasta`](example/input/Erigone_atra_female.fasta) | female genome, from PP726907 |
 
-Each spreadsheet has the columns Gene, Begin, End, Strand, Length, Intergenic nucleotides, Start and Stop, and a second sheet with the raw MITOS2 annotation. The program reads only the first sheet and ignores the Length and Intergenic nucleotides columns.
+Each spreadsheet has the columns Gene, Begin, End, Strand, Length, Intergenic nucleotides, Start and Stop. The program ignores the Length and Intergenic nucleotides columns.
 
 One coordinate in the female spreadsheet was corrected for this example. trnY began at 14417 in the author's working file, but the published Table 1 and GenBank both give 14407. That makes trnY 57 bp, the same length as in the male.
 
@@ -137,10 +137,10 @@ One coordinate in the female spreadsheet was corrected for this example. trnY be
 | trnR | 4522 | 4582 | + | | |
 | trnE | 4565 | 4621 | + | | |
 | trnF | 4605 | 4658 | − | | |
-| ND5 | 4658 | 6294 | − | ATA | TA<sup>b</sup> |
+| ND5 | 4658 | 6294 | − | ATA | TA |
 | trnH | 6288 | 6342 | − | | |
 | ND4 | 6338 | 7615 | − | TTG | TAA |
-| ND4L | 7616 | 7874 | − | ATT | T<sup>b</sup> |
+| ND4L | 7616 | 7874 | − | ATT | T |
 | trnP | 7870 | 7928 | − | | |
 | ND6 | 7932 | 8363 | + | TTG | TAA |
 | trnI | 8359 | 8416 | + | | |
@@ -155,12 +155,12 @@ One coordinate in the female spreadsheet was corrected for this example. trnY be
 | trnQ | 12356 | 12418 | − | | |
 | Control Region | 12419 | 13111 | +/− | | |
 | trnM | 13112 | 13171 | + | | |
-| ND2 | 13162 | 14120 | + | ATA | TA<sup>b</sup> |
+| ND2 | 13162 | 14120 | + | ATA | TA |
 | trnW | 14120 | 14174 | + | | |
 | trnY | 14154 | 14210 | − | | |
 | trnC | 14195 | 5 | − | | |
 
-<sup>b</sup> incomplete stop codon, completed by polyadenylation of the mRNA (the footnote letter is part of the cell and is ignored by the program). trnC crosses the origin: Begin 14195, End 5.
+TA and T are incomplete stop codons, completed by polyadenylation of the mRNA. trnC crosses the origin: Begin 14195, End 5.
 
 </details>
 
