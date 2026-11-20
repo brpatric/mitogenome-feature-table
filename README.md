@@ -2,8 +2,6 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24399061.svg)](https://doi.org/10.5281/zenodo.24399061)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24386073.svg)](https://doi.org/10.5281/zenodo.24386073)
-
 Writes the GenBank **five-column feature table** (`.tbl`) for a mitochondrial genome from a simple gene-order spreadsheet (one row per gene: Gene, Begin, End, Strand, Start codon, Stop codon). The `.tbl` file and the genome FASTA are what NCBI's **table2asn** (or BankIt) needs to make a GenBank submission. It is written to run from the IDLE 3.13 shell, and also runs from the command line.
 
 Typing a feature table by hand is slow and error-prone. Of the two published *Erigone atra* mitogenomes used as the worked example, each GenBank record has one tRNA coordinate that differs from the paper's gene table, and both list the two halves of the origin-spanning tRNA-Cys in the wrong order (see [Step 4](#step-4-check-against-the-genbank-records)). The program writes every feature from the same table you publish, and can check every protein-coding gene against the sequence before you submit.
