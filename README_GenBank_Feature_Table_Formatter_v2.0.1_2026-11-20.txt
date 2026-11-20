@@ -20,8 +20,10 @@ the two halves of the origin-spanning tRNA-Cys in the wrong order (see Step
 4). The program writes every feature from the same table you publish, and can
 check every protein-coding gene against the sequence before you submit.
 
-Current version: 2.0.1 (2026-11-20)  ·  Author: L. Brian Patrick, Department
-of Biological Sciences, Dakota Wesleyan University (ORCID 0000-0003-1969-9600)
+Version 2.0.1 (2026-11-20) · Python 3 (openpyxl)
+
+Author: L. Brian Patrick, Department of Biological Sciences, Dakota Wesleyan
+University, Mitchell, SD, USA · ORCID 0000-0003-1969-9600
 
 Cite as:
 
@@ -74,11 +76,16 @@ nucleotides, notes) can stay in the spreadsheet.
 
 Requirements
 
--   Python 3.8 or later (written and tested for IDLE 3.13)
--   openpyxl, only to read .xlsx files. CSV and tab-delimited files need
-    nothing beyond Python.
+  Item               Version or format                                                        Install or notes
+  ------------------ ------------------------------------------------------------------------ ---------------------------------------------------------------------------------------------------------------
+  Python             3.8 or later (written and tested for IDLE 3.13; tested with 3.13.18)     python.org
+  openpyxl           3.1 or later (tested with 3.1.5)                                         pip install openpyxl. Needed only to read .xlsx files; CSV and tab-delimited input need nothing beyond Python
+  Gene-order table   .xlsx, CSV or tab-delimited; one mitogenome per file, one row per gene   Columns Gene, Begin, End, Strand, Start, Stop (see The input)
+  Genome FASTA       One sequence, the genome the table describes (recommended)               Gives the genome length and sequence ID, and lets every protein-coding gene be checked
+  table2asn          Current NCBI release (for submission, not needed to run the program)     NCBI table2asn
 
-Install openpyxl for the same Python that IDLE uses:
+The program runs anywhere Python runs (Windows, macOS, Linux). Install
+openpyxl for the same Python that IDLE uses:
 
     Windows:  py -3.13 -m pip install openpyxl
     macOS:    python3.13 -m pip install openpyxl
